@@ -1,0 +1,40 @@
+// Imports
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Questrial|Merriweather|Open-Sans');
+
+// Color Variables
+$color-primary: #FFF3F2;
+$color-secondary: #FFFAF8;
+$color-tertiary: #FF6969;
+
+$color-dark: #333;
+$color-gray: #848484;
+
+// Font-Variables
+$font-primary: 'Questrial', sans-serif;
+$font-heading: 'Merriweather', serif;
+$font-text: 'Open Sans', sans-serif;
+
+// Responsive Breakpoints
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    color: $color-dark;
+    font-family: $font-primary;
+}
+
+html, body {
+    min-height: 100%; // full page
+}

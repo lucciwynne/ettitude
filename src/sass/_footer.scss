@@ -1,0 +1,9 @@
+.footer {
+    background: $color-primary;
+    padding: 4rem;
+    text-align: center;
+
+    &__credits {
+        font-family: $font-text;
+    }
+}
