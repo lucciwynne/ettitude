@@ -4,18 +4,20 @@
 // Color Variables
 $color-primary: #FFF3F2;
 $color-secondary: #FFFAF8;
-$color-tertiary: #FF6969;
+$color-tertiary: #fba1a1;
 
 $color-dark: #333;
 $color-gray: #848484;
+$color-gray-light: #f7f7f7;
 
 // Font-Variables
 $font-primary: 'Questrial', sans-serif;
-$font-heading: 'Merriweather', serif;
+$font-logo: 'Merriweather', serif;
+$font-heading: 'Montserrat', sans-serif;
 $font-text: 'Open Sans', sans-serif;
 
 // Responsive Breakpoints
-
+$bp-medium: 43.75em;// 700px/16px
 
 *,
 *::before,
@@ -32,6 +34,7 @@ html {
 
 body {
     color: $color-dark;
+    background: $color-secondary;
     font-family: $font-primary;
 }
 

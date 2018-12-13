@@ -1,0 +1,229 @@
+.navigation {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 6rem;
+    padding: 1rem 0;
+    background: #fff;
+
+    @media screen and (min-width: $bp-medium) {
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+    }
+
+    &__check {
+        display: none;
+    }
+
+    &__btn {
+        display: block;
+        position: fixed;
+        width: 3rem;
+        height: 3rem;
+        left: 2rem;
+        top: 1.5rem;
+        cursor: pointer;
+
+        @media screen and (min-width: $bp-medium) {
+            display: none;
+        }
+        
+        &--icon {
+            position: relative;
+            margin-top: 1.4rem;
+            margin-left: .5rem;
+            transition: all .2s;
+        }
+
+        &--icon, 
+        &--icon::before, 
+        &--icon::after {
+            display: block;
+            width: 1.9rem;
+            height: .3rem;
+            background-color: $color-dark;
+            border-radius: 3px;
+        }
+
+        &--icon::before,
+        &--icon::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &--icon::before {
+            top: -.6rem;
+        }
+
+        &--icon::after {
+            top: .6rem;
+        }
+
+        &:hover &--icon,
+        &:hover &--icon::before,
+        &:hover &--icon::after {
+            background: $color-gray;
+        }
+    }
+
+    // checkbox trick
+    @media screen and (max-width: $bp-medium) {
+        &__check:not(:checked) ~ &__list {
+            max-height: 0;
+        }
+    
+        &__check:checked + &__btn &__btn--icon {
+            background: transparent;
+        }
+    
+        &__check:checked + &__btn &__btn--icon::before {
+            top: 0;
+            transform: rotate(135deg);
+        }
+    
+        &__check:checked + &__btn &__btn--icon::after {
+            top: 0;
+            transform: rotate(-135deg);
+        }
+    }
+
+
+    &__list {
+        position: fixed;
+        display: block;
+        top: 6rem;
+        margin: 0;
+        list-style-type: none;
+        background: #fff;
+        width: 100%;
+        max-height: 25rem;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+
+        @media screen and (min-width: $bp-medium) {
+            position: relative;
+            display: flex;
+            background: transparent;
+            top: 0;
+            padding: 0 2rem;
+        }
+
+        &--link {
+            display: block;
+            padding: 1rem 2rem;
+            color: $color-dark;
+            font-size: 1.4rem;
+            text-transform: lowercase;
+            text-decoration: none;
+
+            &:hover {
+                color: $color-tertiary;
+            }
+
+            @media screen and (min-width: $bp-medium) {
+                padding: 0 1rem;
+            }
+        }
+
+        li:nth-last-of-type(2) {
+            padding-bottom: 1rem;
+
+            @media screen and (min-width: $bp-medium) {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    &__logo {
+        position: fixed;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        width: max-content;
+        line-height: 6rem;
+
+        @media screen and (min-width: $bp-medium) {
+            position: relative;
+        }
+
+        &--link {
+            display: block;
+            font-family: $font-logo;
+            font-size: 3rem;
+            text-transform: lowercase;
+            text-decoration: none;
+            color: $color-dark;
+
+            &:hover {
+                color: $color-gray;
+            }
+        }
+    }
+
+    &__social {
+        background: $color-gray-light;
+        width: 100%;
+        padding: 2rem;
+
+        &--title {
+            font-size: 1.4rem;
+            text-transform: lowercase;
+            display: block;
+            padding-bottom: 1.5rem;
+        }
+
+        &--flex {
+            display: flex;
+        }
+
+        &--link {
+            padding-right: 1rem;
+            color: $color-dark;
+            text-decoration: none;
+
+            &:hover {
+                color: $color-tertiary;
+            }
+        }
+
+        &--icon {
+            font-size: 2rem;
+        }
+    }
+
+    &__social-desktop {
+        display: none;
+
+        @media screen and (min-width: $bp-medium) {
+            padding: 0 2rem;
+  
+            justify-self: end;
+            display: flex;
+
+            &--link {
+                padding-right: 1rem;
+                color: $color-dark;
+                text-decoration: none;
+    
+                &:hover {
+                    color: $color-tertiary;
+                }
+            }
+    
+            &--icon {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+#menu {
+  
+    @media screen and (min-width: $bp-medium) {
+        display: none;
+    }
+}
