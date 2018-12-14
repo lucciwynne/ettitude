@@ -1,7 +1,42 @@
+.heading-1 {
+    color: #fff;
+    font-family: $font-heading;
+    font-size: 2.5rem;
+    text-transform: lowercase;
+    text-align: center;
+    letter-spacing: .2rem;
+    display: inline-block;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
 .heading-2 {
     font-family: $font-heading;
     font-size: 2rem;
     text-align: center;
     padding: 0 0 2rem;
     text-transform: lowercase;
+}
+
+.heading-3 {
+    color: #fff;
+    font-family: $font-heading;
+    font-size: 2.4rem;
+    text-transform: lowercase;
+    text-align: center;
+    letter-spacing: .2rem;
+    display: inline-block;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.p-text {
+    font-family: $font-text;
+    font-size: 1.4rem;
+    font-weight: 200;
+    text-align: center;
+    padding: 1rem;
+    display: block;
+    max-width: 70rem;
+    margin: 0 auto;
 }

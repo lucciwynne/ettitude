@@ -1,8 +1,25 @@
 .contact {
-    padding: 10rem 6rem;
     background: #fff;
 
     &__heading {
         padding-bottom: 4rem;
+    }
+
+    &__email-btn {
+        font-weight: bold;
+        color: #fff;
+        font-size: 1.8rem;
+        background: $color-dark;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1rem 1.5rem;
+        display: block;
+        width: -moz-max-content;
+        margin: 0 auto;
+        transition: all .2s;
+
+        &:hover {
+            background: $color-gray; 
+        }
     }
 }

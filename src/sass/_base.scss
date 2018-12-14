@@ -30,6 +30,7 @@ $bp-medium: 43.75em;// 700px/16px
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -40,4 +41,8 @@ body {
 
 html, body {
     min-height: 100%; // full page
+}
+
+section {
+    padding: 8rem 1rem;
 }

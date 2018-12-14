@@ -7,6 +7,7 @@
     background: #fff;
 
     @media screen and (min-width: $bp-medium) {
+        height: 8rem;
         padding: 0;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -101,7 +102,7 @@
         background: #fff;
         width: 100%;
         max-height: 25rem;
-        transition: all 0.3s ease-in;
+        transition: max-height 0.3s ease-in;
         overflow-y: hidden;
 
         @media screen and (min-width: $bp-medium) {
@@ -109,7 +110,7 @@
             display: flex;
             background: transparent;
             top: 0;
-            padding: 0 2rem;
+            padding: 0 3rem;
         }
 
         &--link {
@@ -119,6 +120,7 @@
             font-size: 1.4rem;
             text-transform: lowercase;
             text-decoration: none;
+            transition: all .2s;
 
             &:hover {
                 color: $color-tertiary;
@@ -157,6 +159,11 @@
             text-transform: lowercase;
             text-decoration: none;
             color: $color-dark;
+            transition: all .2s;
+
+            @media screen and (min-width: $bp-medium) {
+                font-size: 3.5rem;
+            }
 
             &:hover {
                 color: $color-gray;
@@ -184,6 +191,7 @@
             padding-right: 1rem;
             color: $color-dark;
             text-decoration: none;
+            transition: all .2s;
 
             &:hover {
                 color: $color-tertiary;
@@ -199,7 +207,7 @@
         display: none;
 
         @media screen and (min-width: $bp-medium) {
-            padding: 0 2rem;
+            padding: 0 3rem;
   
             justify-self: end;
             display: flex;
@@ -208,6 +216,7 @@
                 padding-right: 1rem;
                 color: $color-dark;
                 text-decoration: none;
+                transition: all .2s;
     
                 &:hover {
                     color: $color-tertiary;
