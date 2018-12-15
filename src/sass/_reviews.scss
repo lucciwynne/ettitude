@@ -1,25 +1,94 @@
 .reviews {
+    height: max-content;
+    position: relative;
     background: $color-primary;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 6rem;
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
     color: #000;
+    overflow: hidden;
+
+    &__inner {
+        position: absolute;
+        width: 300%;
+        top: 6rem;
+        left: 0;
+        transition: left .4s;
+
+        display: flex;
+        flex-flow: row nowrap;
+    }
 
     &__card {
+        width: 100%;
+        padding: 0 2rem;
+        
         display: grid;
+        grid-template-rows: repeat(2, max-content);
+        align-content: center;
         grid-gap: 2rem;
 
         @media screen and (min-width: $bp-medium) {
-            max-width: 60%;
-            margin: 0 auto;
+            padding: 0 4rem;
+        }
+
+        @media screen and (min-width: $bp-large) {
+            padding: 0 14rem;
+        }
+
+        @media screen and (min-width: $bp-larger) {
+            padding: 0 35rem;
         }
 
         &--quote {
             line-height: 1.4;
         }
-    }
-    
 
+        &--client {
+
+        }
+    }
+
+    &__nav {
+        width: 1.2rem;
+        height: 1.2rem;
+        margin: 0 1.2rem;
+        margin-top: 41rem;
+        border: .7rem solid $color-dark;
+        border-radius: 50%;
+        transition: all .4s;
+        z-index: 100;
+        cursor: pointer;
+        appearance: none;
+        backface-visibility: hidden;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+
+        @media screen and (min-width: $bp-small) {
+            margin-top: 35rem;
+        }
+
+        @media screen and (min-width: $bp-medium) {
+            margin-top: 25rem;
+        }
+
+        &:checked {
+            border: .7rem solid $color-tertiary;
+        }
+    }
+
+}
+
+.reviews__nav:checked:nth-of-type(1) ~ .reviews__inner {
+    left: 0%;
+}
+
+.reviews__nav:checked:nth-of-type(2) ~ .reviews__inner {
+    left: -100%;
+}
+
+.reviews__nav:checked:nth-of-type(3) ~ .reviews__inner {
+    left: -200%;
 }

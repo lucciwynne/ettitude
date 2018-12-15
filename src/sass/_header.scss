@@ -1,5 +1,6 @@
 .header {
     height: 100vh;
+    padding-top: 6rem;
     background: url("https://i.postimg.cc/T1vFVTQp/samuel-zeller-250029-unsplash.jpg") no-repeat;
     background-size: cover;
   
@@ -8,6 +9,7 @@
 
     @media screen and (min-width: $bp-medium) {
         height: 80vh;
+        padding-top: 8rem;
     }
 
     &__text {
