@@ -39,6 +39,16 @@
     &__figure {
         text-align: center;
         padding: 1rem 0;
+        opacity: 0;
+
+        
+
+        &:nth-of-type(5),
+        &:nth-of-type(6),
+        &:nth-of-type(7),
+        &:nth-of-type(8) {
+            animation: fadeInRight .75s ease-in-out forwards;
+        }
 
         i {
             color: #fff;
