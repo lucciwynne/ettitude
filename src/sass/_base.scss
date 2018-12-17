@@ -36,6 +36,10 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
 
+    @media screen and (min-width: $bp-larger) {
+        font-size: 70%;
+    }
+
     @media screen and (min-width: $bp-largest) {
         font-size: 85%;
     }
